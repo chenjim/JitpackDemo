@@ -39,7 +39,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-
 }
 
 afterEvaluate {
@@ -48,9 +47,12 @@ afterEvaluate {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
                 from components.release
-                groupId = 'org.mediasoup.droid'
-                artifactId = 'mediasoup-client'
-                version = '0.0.7'
+                //建议和github地址对应，否则对jitpack无效
+                groupId = 'com.github.chenjim'
+                //建议和github仓库名称对应，否则对jitpack无效
+                artifactId = 'JitpackDemo'
+                //建议和release的tag相同，否则对jitpack无效
+                version = '0.1.0'
             }
         }
     }
